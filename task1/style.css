@@ -1,0 +1,35 @@
+body {
+    margin: auto;
+}
+
+.container {
+    
+}
+
+.firstColumn,
+.lastColumn {
+    width: 20%;
+    float: left;
+    background: #C7D0CC;
+    height: 100vh;
+}
+
+.boxArea {
+    width: 60%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#textArea {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+#button {
+    display: block;
+    margin-top: 10px;
+    float: right;
+}
+
