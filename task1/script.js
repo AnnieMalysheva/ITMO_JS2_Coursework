@@ -5,18 +5,33 @@ var button = document.getElementById('button');
 button.addEventListener("click", function () {
     var elem = document.createElement('div');
     var text = document.createTextNode(textArea.value);
-    elem.style.textAlign = 'center';
+    var del = document.createElement('div');
+    elem.style.textAlign = 'left';
     elem.style.border = '1px solid black';
+    elem.id = 'elem';
+    del.id = 'del';
+    
     elem.appendChild(text);   
+    elem.appendChild(del);   
     box.appendChild(elem);
+    
     box.style.marginTop = '50px';
-    textArea.value = '';   
+    box.style.padding = '15px 0 0 0';
+    
+    textArea.value = '';
+    
+    del.innerHTML = '&#10006;';
+    del.style.cursor = 'pointer';
+    del.style.float = 'right';
+    del.style.marginRight = '5px';
+       
   });
 
-var del = document.createElement('');
-    elem.appendChild(del);
 
-//'<div id="item">' + text + '</div>'
+box.addEventListener('click', function(event) {
+    var currentObj = event.target;
+	currentObj.parentNode.remove();
+});
 
 
 
